@@ -74,3 +74,5 @@ NTLM relay x takes the relay, it passes it to a target file specified.
 Using nmap to do a quick check:
 
 `nmap --script=smb2-security-mode.nse -p445 192.168.57.0/24`
+
+**SMB Relay Attack Demonstration**
