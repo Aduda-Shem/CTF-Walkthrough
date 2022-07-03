@@ -44,6 +44,7 @@ Part 2
 Dirbuster and dirb and go buster are used to do web busting
 
 Running dirbuster;
+
       `root@kali:-/kioptrix# dirbuster&`
       
 We inspect page source to look for comments or anything that is diclosed which shouldn’t be disclosed.
