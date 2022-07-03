@@ -2,23 +2,23 @@
 ----------------------------------------------------------------------                                                                                     
 ## SCANNING WITH NMAP:
 
-  `root@kali:-# arp-scan -l`
+`root@kali:-# arp-scan -l`
   
 And look for vmware
 
-  `root@kali:-# ifconfig`
+`root@kali:-# ifconfig`
   
 Identifying your ip adress
 
-   `root@kali:-# netdiscover -r 192.168.57.0/24`
+`root@kali:-# netdiscover -r 192.168.57.0/24`
    
 Use ctrl+C to kill this session
 
-    `root@kali:-# nmap -T4 -p- -A 192.168.57.134`
+`root@kali:-# nmap -T4 -p- -A 192.168.57.134`
     
 There are 65535 ports out there
 
-     `root@kali:-# nmap --help`
+`root@kali:-# nmap --help`
 
 
 ## ENUMERATING HTTP AND HTTPS part 1
@@ -33,11 +33,11 @@ Information disclosure - server headers disclose version information
 
 Nikto is a web vulnerability scanner.
 
-   `root@kali:-# nikto -h https://192.168.57.134`
+`root@kali:-# nikto -h https://192.168.57.134`
    
 If https doesn’t work try http instead
 
-    `root@kali:-# nikto -h http://192.168.57.134`
+`root@kali:-# nikto -h http://192.168.57.134`
 
 
 Part 2
@@ -45,7 +45,7 @@ Dirbuster and dirb and go buster are used to do web busting
 
 Running dirbuster;
 
-      `root@kali:-/kioptrix# dirbuster&`
+`root@kali:-/kioptrix# dirbuster&`
       
 We inspect page source to look for comments or anything that is diclosed which shouldn’t be disclosed.
 
@@ -70,42 +70,42 @@ serial ports between nodes on a network.
 
 Metasploit is an exploitation framework
 
-   `root@kali:-# msfvenom`
+`root@kali:-# msfvenom`
    
 To startup metasploit framework
 
 Metasploit framework - RECON,EXPLOIT,PAYLOAD,LOOT
 
-     `Msf>smb`
+`Msf>smb`
      
 To search smb
 
-    `Msf5> use auxiliary/Scanner/smb/smb_version`
+`Msf5> use auxiliary/Scanner/smb/smb_version`
     
-    `Msf5 auxiliary(Scanner/smb/smb_version) > info`
+`Msf5 auxiliary(Scanner/smb/smb_version) > info`
     
-    `Msf5 auxiliary(Scanner/smb/smb_version) > options`
+`Msf5 auxiliary(Scanner/smb/smb_version) > options`
     
-    `Msf5 auxiliary(Scanner/smb/smb_version) > set RHOSTS 192.168.57.139`
+`Msf5 auxiliary(Scanner/smb/smb_version) > set RHOSTS 192.168.57.139`
     
-    `Msf5 auxiliary(Scanner/smb/smb_version) > run`
+`Msf5 auxiliary(Scanner/smb/smb_version) > run`
     
 The ability to scan and enumerate will make you a great pemtester
 
 Now lets look at a new tool called smbclient that will help us connect to the file shell out there
 
-    `root@kali:-# smbclient -L \\\\192.168.57.134\\`
+`root@kali:-# smbclient -L \\\\192.168.57.134\\`
     
-    `root@kali:-# smbclient \\\\192.168.57.134\\ADMIN$`
+`root@kali:-# smbclient \\\\192.168.57.134\\ADMIN$`
     
-    `root@kali:-# smbclient \\\\192.168.57.134\\IPC$`
+`root@kali:-# smbclient \\\\192.168.57.134\\IPC$`
 
 ## ENUMERATING SSH
-   `root@kali:-# ssh 192.168.57.134`
+`root@kali:-# ssh 192.168.57.134`
    
-   `root@kali:-# ssh 192.168.57.134 -oKexAlgorithms=+diffie-hellman-group1-sha1`
+`root@kali:-# ssh 192.168.57.134 -oKexAlgorithms=+diffie-hellman-group1-sha1`
    
-   `root@kali:-# ssh 192.168.57.134 -oKexAlgorithms=+diffie-hellman-group1-sha1 -caes128-cbc`
+`root@kali:-# ssh 192.168.57.134 -oKexAlgorithms=+diffie-hellman-group1-sha1 -caes128-cbc`
 
 ##  Researching Potential vulnerabilities
 -------------------------------------------
