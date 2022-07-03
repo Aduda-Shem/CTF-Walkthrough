@@ -10,7 +10,7 @@ Authenticates using kerberos - Non-windows devices such as Linux machines, firew
 # ATTACKING ACTIVE DIRECTORY 
 First we need to find our way into the network through abusing features of windows.
 
-**1---LLMNR POISONING** 
+**1---LLMNR POISONING**
 
 LINK LOCAL MULTICAST & NAME RESOLUTION - used to Identify hosts when DNS fails to do so.
 
@@ -75,3 +75,7 @@ Set up your relay:
 
 
 NTLM relay x takes the relay, it passes it to a target file specified.
+**Discovery Hosts with SMB Signing Disabled**
+Using nmap to do a quick check:
+
+`nmap --script=smb2-security-mode.nse -p445 192.168.57.0/24`
