@@ -97,6 +97,7 @@ we partially know what we are going to enumerate:
 • Extract information using NTP Enumeration (UDP 123)
 Enumeration Tools on Linux and Windows
 
+
 ## SMTP Enumeration
 ● NetScanTools Pro is a Windows tool with a graphical user interface, it is an email
 generator and email relay testing tool.
