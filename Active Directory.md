@@ -10,7 +10,9 @@ Authenticates using kerberos - Non-windows devices such as Linux machines, firew
 # ATTACKING ACTIVE DIRECTORY 
 First we need to find our way into the network through abusing features of windows.
 
-# 1.LLMNR POISONING - LINK LOCAL MULTICAST & NAME RESOLUTION
+# 1.LLMNR POISONING 
+LINK LOCAL MULTICAST & NAME RESOLUTION
+
 used to Identify hosts when DNS fails ti do so.
 
 Previously known as NBT_NS.
@@ -29,12 +31,12 @@ STEPS:
 - Get some hashes
 - Crack the hashes 
 
-Capturing NTLMV2 Hashes with Responder
-------------------------------------------
+**Capturing NTLMV2 Hashes with Responder**
+
  `responder -I eth0 -rdwv`
  
- Password cracking with Hashcats
- -----------------------------------------
+ **Password cracking with Hashcats **
+ 
  copy and paste the hashes collected:
  
  `gedit hashes.txt`
