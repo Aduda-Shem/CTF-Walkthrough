@@ -74,9 +74,11 @@ Metasploit is an exploitation framework
 To startup metasploit framework
 
 Metasploit framework - RECON,EXPLOIT,PAYLOAD,LOOT
+
      `Msf>smb`
      
 To search smb
+
     `Msf5> use auxiliary/Scanner/smb/smb_version`
     
     `Msf5 auxiliary(Scanner/smb/smb_version) > info`
