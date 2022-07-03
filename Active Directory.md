@@ -53,7 +53,8 @@ STEPS:
  - Use Strong User Password
 
 **2---SMB RELAY ATTACKS**
- SMB signing is a packet level protocol.
+
+SMB signing is a packet level protocol.
 Instead of cracking hashes gathered with Responder, we can instead relay these hashes to specific machines and potentially gain access.
 
 Requirements:
@@ -71,9 +72,8 @@ Set up your relay:
 
 `python ntlmrelayx.py -tf targets.txt -smb2support`
 
-
-
 NTLM relay x takes the relay, it passes it to a target file specified.
+
 **Discovery Hosts with SMB Signing Disabled**
 Using nmap to do a quick check:
 
