@@ -135,7 +135,7 @@ Ctrl + Z
 stty raw -echo; fg
 ```
 
-the above also prevents Ctrl + C killing the reverse shell. if the shell dies, your shell will be boned as no commands sent will be returned. to fix this: type reset and press enter (Thanks TryHackMe)
+the above also prevents Ctrl + C killing the reverse shell. if the shell dies, your shell will be boned as no commands sent will be returned.
 
 if python, perl etc are not available (or not accessible by www-data or whoever), but you can wget, then wget socat:
 
