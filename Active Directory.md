@@ -6,9 +6,10 @@ Authenticates using kerberos - Non-windows devices such as Linux machines, firew
 
 
 **ATTACKING ACTIVE DIRECTORY**
+
 First we need to find our way into the network through abusing features of windows.
 
-**1---LLMNR POISONING**
+**1.LLMNR POISONING**
 
 Link Local Multicast & Name Resolution- used to Identify hosts when DNS fails to do so.
 Previously known as NBT_NS.
@@ -47,7 +48,7 @@ STEPS:
  - Enable Network Access Control
  - Use Strong User Password
 
-**2---SMB RELAY ATTACKS**
+**2.SMB RELAY ATTACKS**
 
 SMB signing is a packet level protocol.
 Instead of cracking hashes gathered with Responder, we can instead relay these hashes to specific machines and potentially gain access.
