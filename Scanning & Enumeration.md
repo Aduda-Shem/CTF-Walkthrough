@@ -1,7 +1,6 @@
 # SCANNING and ENUMERATION
 ----------------------------------------------------------------------                                                                                     
-## SCANNING WITH NMAP
-
+## SCANNING WITH NMAP:
   `root@kali:-# arp-scan -l`
 And look for vmware
   `root@kali:-# ifconfig`
