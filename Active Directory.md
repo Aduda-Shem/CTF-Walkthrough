@@ -12,9 +12,7 @@ First we need to find our way into the network through abusing features of windo
 
 **1 LLMNR POISONING** 
 
-LINK LOCAL MULTICAST & NAME RESOLUTION
-
-used to Identify hosts when DNS fails ti do so.
+LINK LOCAL MULTICAST & NAME RESOLUTION - used to Identify hosts when DNS fails to do so.
 
 Previously known as NBT_NS.
 
@@ -36,7 +34,7 @@ STEPS:
 
  `responder -I eth0 -rdwv`
  
- **Password cracking with Hashcats **
+ **Password cracking with Hashcats**
  
  copy and paste the hashes collected:
  
@@ -55,4 +53,23 @@ STEPS:
  - Use Strong User Password
 
 **2 SMB RELAY ATTACKS**
+SMB signing is a packet level protocol.
 
+Instead of cracking hashes gathered with Responder, we can instead relay these hashes to specific machines and potentially gain access.
+
+Requirements:
+
+- SMB signing must be disabled on the target.
+- Relayed user credentials must be admin on machine.
+
+Run Responder:
+
+`gedit Responder.conf` - Turn off SMB & HTTP
+
+`python Responder.py -I tun0 -rdw -v`
+
+Set up your relay:
+
+`python ntlmrelayx.py -tf targets.txt -smb2support`
+
+NTLM relay x takes the relay, it passes it to a target file specified.
