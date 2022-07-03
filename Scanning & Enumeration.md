@@ -36,6 +36,7 @@ Nikto is a web vulnerability scanner.
    `root@kali:-# nikto -h https://192.168.57.134`
    
 If https doesn’t work try http instead
+
     `root@kali:-# nikto -h http://192.168.57.134`
 
 
