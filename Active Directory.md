@@ -1,10 +1,8 @@
 # ACTIVE DIRECTORY
 
 Directory services developed by Microsoft to manage windows domain networks.
-
-Stores information related objects, such as Computers, Users, Printers etc. (Acts like a phonebook for Windows)
-
-Authenticates using kerberos - Non-windows devices such as Linux machines, firewalls etc. can also authenticate to Active Directory via RADIUS or LDAP
+Stores information related objects, such as Computers, Users, Printers etc. (Acts like a phonebook for Windows).
+Authenticates using kerberos - Non-windows devices such as Linux machines, firewalls etc. can also authenticate to Active Directory via RADIUS or LDAP.
 
 
 # ATTACKING ACTIVE DIRECTORY 
@@ -46,8 +44,8 @@ STEPS:
  
  **LLMNR Poisoning defenses**
  
- Best defense is to disable LLMNR & NBT-NS
- if you have to use or cannot disable LLMNR/NBT-NS;
+ Best defense is to disable LLMNR & NBT-NS.
+ If you have to use or cannot disable LLMNR/NBT-NS;
  
  - Enable Network Access Control
  - Use Strong User Password
@@ -75,6 +73,7 @@ Set up your relay:
 NTLM relay x takes the relay, it passes it to a target file specified.
 
 **Discovery Hosts with SMB Signing Disabled**
+
 Using nmap to do a quick check:
 
 `nmap --script=smb2-security-mode.nse -p445 192.168.57.0/24`
