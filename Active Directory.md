@@ -10,7 +10,7 @@ Authenticates using kerberos - Non-windows devices such as Linux machines, firew
 # ATTACKING ACTIVE DIRECTORY 
 First we need to find our way into the network through abusing features of windows.
 
-**1.LLMNR POISONING ** 
+**1 LLMNR POISONING** 
 
 LINK LOCAL MULTICAST & NAME RESOLUTION
 
@@ -54,5 +54,5 @@ STEPS:
  - Enable Network Access Control
  - Use Strong User Password
 
-**2.SMB RELAY ATTACKS **
+**2 SMB RELAY ATTACKS**
 
