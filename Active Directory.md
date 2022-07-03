@@ -5,7 +5,7 @@ Stores information related objects, such as Computers, Users, Printers etc. (Act
 Authenticates using kerberos - Non-windows devices such as Linux machines, firewalls etc. can also authenticate to Active Directory via RADIUS or LDAP.
 
 
-# ATTACKING ACTIVE DIRECTORY 
+**ATTACKING ACTIVE DIRECTORY**
 First we need to find our way into the network through abusing features of windows.
 
 **1---LLMNR POISONING**
