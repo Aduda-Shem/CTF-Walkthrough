@@ -1,23 +1,36 @@
 # SCANNING and ENUMERATION
 ----------------------------------------------------------------------                                                                                     
 ## SCANNING WITH NMAP:
+
   `root@kali:-# arp-scan -l`
+  
 And look for vmware
+
   `root@kali:-# ifconfig`
+  
 Identifying your ip adress
+
    `root@kali:-# netdiscover -r 192.168.57.0/24`
+   
 Use ctrl+C to kill this session
+
     `root@kali:-# nmap -T4 -p- -A 192.168.57.134`
+    
 There are 65535 ports out there
+
      `root@kali:-# nmap --help`
 
 
 ## ENUMERATING HTTP AND HTTPS part 1
+
 80/443 - 192.168.57.134
+
 Dafult webpage -Apache -PHP
 
 Information disclosure -page 404
+
 Information disclosure - server headers disclose version information
+
 Nikto is a web vulnerability scanner.
 
    `root@kali:-# nikto -h https://192.168.57.134`
