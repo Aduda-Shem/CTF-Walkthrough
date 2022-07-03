@@ -10,12 +10,9 @@ First we need to find our way into the network through abusing features of windo
 
 **1---LLMNR POISONING**
 
-LINK LOCAL MULTICAST & NAME RESOLUTION - used to Identify hosts when DNS fails to do so.
-
+Link Local Multicast & Name Resolution- used to Identify hosts when DNS fails to do so.
 Previously known as NBT_NS.
-
 Key flaw is that the services utilize a user's username and NTLMV2 hash when appropriately responded to.
-
 We will use a tool called `Responder`
 
 `python Responder.py -I tun0 -rdw -V`
