@@ -53,8 +53,7 @@ STEPS:
  - Use Strong User Password
 
 **2---SMB RELAY ATTACKS**
- - SMB signing is a packet level protocol.
-
+ SMB signing is a packet level protocol.
 Instead of cracking hashes gathered with Responder, we can instead relay these hashes to specific machines and potentially gain access.
 
 Requirements:
