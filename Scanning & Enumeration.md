@@ -34,39 +34,55 @@ Information disclosure - server headers disclose version information
 Nikto is a web vulnerability scanner.
 
    `root@kali:-# nikto -h https://192.168.57.134`
+   
 If https doesn’t work try http instead
     `root@kali:-# nikto -h http://192.168.57.134`
 
 
 Part 2
 Dirbuster and dirb and go buster are used to do web busting
+
 Running dirbuster;
       `root@kali:-/kioptrix# dirbuster&`
+      
 We inspect page source to look for comments or anything that is diclosed which shouldn’t be disclosed.
+
 In response codes;
+
 200 means OK
+
 400 means an error
+
 300 means redirect
+
 500 means server errors
 
 
 ## ENUMERATING SMB
 SMB is a file share.
+
 In computer networking, Server Message Block (SMB), one version of which was also known as Common
+
 Internet File System (CIFS), is a communication protocol for providing shared access to files, printers, and
 serial ports between nodes on a network.
+
 Metasploit is an exploitation framework
    `root@kali:-# msfvenom`
+   
 To startup metasploit framework
+
 Metasploit framework - RECON,EXPLOIT,PAYLOAD,LOOT
      `Msf>smb`
+     
 To search smb
     `Msf5> use auxiliary/Scanner/smb/smb_version`
     `Msf5 auxiliary(Scanner/smb/smb_version) > info`
     `Msf5 auxiliary(Scanner/smb/smb_version) > options`
     `Msf5 auxiliary(Scanner/smb/smb_version) > set RHOSTS 192.168.57.139`
     `Msf5 auxiliary(Scanner/smb/smb_version) > run`
+    
 The ability to scan and enumerate will make you a great pemtester
+
 Now lets look at a new tool called smbclient that will help us connect to the file shell out there
     `root@kali:-# smbclient -L \\\\192.168.57.134\\`
     `root@kali:-# smbclient \\\\192.168.57.134\\ADMIN$`
@@ -80,13 +96,21 @@ Now lets look at a new tool called smbclient that will help us connect to the fi
 ##  Researching Potential vulnerabilities
 -------------------------------------------
 Enumeration is defined as the process of helping the attacker collect information about:
+
 ● Network resources
+
 ● Shares
+
 ● Users and/or groups
+
 ● Machine names
+
 ● Routing tables
+
 ● Applications and banners
+
 ● Auditing and service settings
+
 ● SNMP and DNS details
 
 Enumeration will help us to identify the vulnerabilities present in the target system. This information will
