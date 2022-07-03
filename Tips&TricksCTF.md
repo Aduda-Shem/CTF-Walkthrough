@@ -1,6 +1,6 @@
 # Tips & Tricks around playing CTF machines
 
-Use full tips and tricks to have during playing CTF challenges
+Useful tips and tricks to have during playing CTF challenges
 
 ## REVERSE SHELLS
 
