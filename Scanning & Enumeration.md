@@ -94,11 +94,11 @@ The ability to scan and enumerate will make you a great pemtester
 
 Now lets look at a new tool called smbclient that will help us connect to the file shell out there
 
-`root@kali:-# smbclient -L \\\\192.168.57.134\\
+`root@kali:-# smbclient -L \\\\192.168.57.134\\`
     
-root@kali:-# smbclient \\\\192.168.57.134\\ADMIN$
+`root@kali:-# smbclient \\\\192.168.57.134\\ADMIN$`
     
-root@kali:-# smbclient \\\\192.168.57.134\\IPC$`
+`root@kali:-# smbclient \\\\192.168.57.134\\IPC$`
 
 ## ENUMERATING SSH
 `root@kali:-# ssh 192.168.57.134`
