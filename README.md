@@ -1,2 +1,2 @@
 # Pentest | CTF
-`Sample Penetest CTF played and Research`
+`Sample Penetest CTF played and Security Research`
